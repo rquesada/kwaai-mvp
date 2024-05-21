@@ -1,0 +1,21 @@
+.bot-card{
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.bot-card-header{
+
+    img{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px 5px 0px 0px;
+    }
+}
+
+.bot-button{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    margin-right: 8px;
+}

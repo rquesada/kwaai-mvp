@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Bot 1",
+    "description": "This is Bot One",
+    "img": "https://logolife.org/wp-content/uploads/2022/08/bot-transparent.png"
+  },
+  {
+    "id": 2,
+    "name": "Bot 2",
+    "description": "This is Bot Two",
+    "img": "https://cdn-icons-png.flaticon.com/256/1448/1448779.png"
+  },
+  {
+    "id": 3,
+    "name": "Bot 3",
+    "description": "This is Bot Two",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTit0UpPXNoSThn4Isl6uoZuSyTKmyvWhPrylXS66VVBw&s"
+  }
+]

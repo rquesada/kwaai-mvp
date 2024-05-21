@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    width: 100%;
+    flex-direction: column;
+}
+.bots-title{
+    padding: 0px 20px;
+}
+.bots-list-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+}

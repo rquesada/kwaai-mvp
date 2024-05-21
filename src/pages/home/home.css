@@ -1,0 +1,18 @@
+.home-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.left-div, .right-div {
+  flex: 1; /* Ensures each div takes up equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0; /* Prevents divs from growing beyond 50% width */
+}
+
+.right-div {
+  background-color: red;
+}

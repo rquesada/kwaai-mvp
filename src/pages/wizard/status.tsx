@@ -1,10 +1,41 @@
-import { Link } from "react-router-dom";
+import {Bot} from "../../data/types";
 
-export default function Status() {
-    return (
-        <div>
-            Status
-            <Link to="/List ">End</Link>
-        </div>
-    );
-} 
+interface StatusProps {
+  bot: Bot;
+  setBot: React.Dispatch<React.SetStateAction<Bot>>;
+}
+
+const Status: React.FC<StatusProps> = ({ bot, setBot }) => {
+  
+  function statusHandle(status: string) {
+    setBot({ ...bot, status });
+  }
+
+  return (
+    <div className="details-container">
+      <span className="details-title">Deploy your bot</span>
+      <div className="status-buttons">
+        <button
+          className={bot.status === "Private" ? "active" : ""}
+          onClick={() => statusHandle("Private")}
+        >
+          Private
+        </button>
+        <button
+          className={bot.status === "Public" ? "active" : ""}
+          onClick={() => statusHandle("Public")}
+        >
+          Public
+        </button>
+        <button
+          className={bot.status === "Draft" ? "active" : ""}
+          onClick={() => statusHandle("Draft")}
+        >
+          Draft
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Status;

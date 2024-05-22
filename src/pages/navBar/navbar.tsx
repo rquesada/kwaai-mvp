@@ -1,4 +1,3 @@
-// src/components/NavBar.tsx
 import React from "react";
 import { FaBell } from "react-icons/fa";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -11,7 +10,7 @@ const NavBar: React.FC = () => {
       <div className="navbar-logo">My bots</div>
       <ul className="navbar-menu">
         <li className="navbar-item">
-          <Link to="/Face"><FaBell /></Link>
+          <Link to="/Wizard"><FaBell /></Link>
         </li>
         <li className="navbar-item">
           <FaRegUserCircle />

@@ -1,0 +1,134 @@
+.wizard-container {
+  display: flex;
+  width: calc(100% - 24px);
+  height: calc(100vh - 48px); /* Full height of the viewport */
+  padding: 12px;
+  flex-direction: column;
+}
+
+.sections-container {
+  margin-top: 40px;
+  display: flex;
+}
+
+.left-section-wizard {
+  flex: 1; /* Ensures each div takes up equal space */
+  display: flex;
+  max-width: 50%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-section-wizard {
+  flex: 1; /* Ensures each div takes up equal space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
+
+.wizard-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.wizard-button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.wizard-button + .wizard-button {
+  margin-left: 10px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.details-title {
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 20px;
+}
+
+.details-subtitle {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.dropzone {
+  border: 2px dashed #cccccc;
+  border-radius: 4px;
+  background: #fafafa;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone p {
+  margin: 0;
+}
+
+.dropzone:hover {
+  background-color: #e0e0e0;
+}
+
+aside {
+  margin-top: 20px;
+}
+
+aside h4 {
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 5px;
+}
+
+.llm-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+}
+
+.status-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.status-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}

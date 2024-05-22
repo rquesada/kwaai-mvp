@@ -1,7 +1,7 @@
 import NavBar from "../navBar/navbar";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { Bot } from "../../data/types";
-import data from "../../data/data.json";
+import data from "../../data/bots.json";
 import "./botsList.css";
 import "./botItem/botItem.css";
 import BotItem from "./botItem/botItem";
@@ -12,16 +12,16 @@ export default function BotsList() {
   useEffect(() => {
     setBots(data);
   }, []);
- 
+
   return (
     <>
       <NavBar />
-      <div className="container">        
+      <div className="container">
         <div className="bots-title">
           <h1>Bots List</h1>
         </div>
         <div className="bots-list-grid">
-        {bots.map((bot) => (
+          {bots.map((bot) => (
             <BotItem key={bot.id} botItemData={bot} />
           ))}
         </div>

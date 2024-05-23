@@ -1,17 +1,12 @@
+import React from "react";
 import NavBar from "../navBar/navbar";
-import { useEffect, useState } from "react";
-import { Bot } from "../../data/types";
-import data from "../../data/bots.json";
+import { useBots } from "../../context/BotsContext";
+import BotItem from "./botItem/botItem";
 import "./botsList.css";
 import "./botItem/botItem.css";
-import BotItem from "./botItem/botItem";
 
 export default function BotsList() {
-  const [bots, setBots] = useState<Bot[]>([]);
-
-  useEffect(() => {
-    setBots(data);
-  }, []);
+  const { bots } = useBots();
 
   return (
     <>

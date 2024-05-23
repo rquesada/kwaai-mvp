@@ -1,11 +1,11 @@
 export interface LlmOption {
-  id: number;
+  id: string;
   name: string;
   image: string;
 }
 
 export interface Bot {
-  id: number;
+  id: string;
   name: string;
   description: string;
   img: string;

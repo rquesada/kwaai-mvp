@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import BotsList from "./pages/botsList/botsList";
 import Wizard from "./pages/wizard/wizard";
+import { BotsProvider } from "./context/BotsContext";
 
 function App() {
   return (
-    <div>
+    <BotsProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -13,7 +14,7 @@ function App() {
           <Route path="/Wizard" element={<Wizard />} />
         </Routes>
       </Router>
-    </div>
+    </BotsProvider>
   );
 }
 

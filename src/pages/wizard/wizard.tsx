@@ -7,21 +7,25 @@ import Llm from "./llm/llm";
 import Status from "./status";
 import { LlmOption, Bot } from "../../data/types";
 import ConfirmationModal from "../../components/confirmationModal";
+import { useBots } from "../../context/BotsContext";
+import { v4 as uuidv4 } from 'uuid';
 import "./wizard.css";
+
 
 export default function Wizard() {
   const [currentStep, setCurrentStep] = useState(0);
   const [newBot, setNewBot] = useState<Bot>({
-    id: 0,
+    id: uuidv4(),
     name: "",
     description: "",
     img: "",
-    llm: { id: 0, name: "", image: "" },
+    llm: { id: uuidv4(), name: "", image: "" },
     files: [],
     status: "",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+  const { addBot } = useBots();
 
   const steps = [
     <Details 
@@ -68,6 +72,12 @@ export default function Wizard() {
     navigate("/List");
   };
 
+  const handleDeploy = () => {
+    console.log("New bot to add", newBot);
+    addBot(newBot);
+    navigate("/List");
+  };
+
   return (
     <div className="wizard-container">
       <span>Create your custom robot</span>
@@ -93,7 +103,7 @@ export default function Wizard() {
         </button>
         {currentStep === steps.length - 1 && (
           <button
-            onClick={handleConfirmCancel}
+            onClick={handleDeploy}
             className="wizard-button"
           >
             Deploy

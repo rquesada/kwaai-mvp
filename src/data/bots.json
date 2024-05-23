@@ -1,41 +1,20 @@
 [
   {
     "id": 1,
-    "name": "Bot a1",
+    "name": "Bot One",
     "description": "This is Bot One",
-    "img": "https://logolife.org/wp-content/uploads/2022/08/bot-transparent.png",
+    "img": "path/to/image1.png",
+    "llm": { "id": 1, "name": "LLM One", "image": "path/to/llm1.png" },
     "files": [],
-    "llm":{
-      "id": 2,
-      "name": "Llama2",
-      "image": "https://assets-global.website-files.com/625447c67b621ab49bb7e3e5/6511e6898e966841878dee22_64f2042e4dd1948b864b520b_Frame%25203186%2520(1).jpeg"
-    },
     "status": "active"
   },
   {
     "id": 2,
-    "name": "Bot 2",
+    "name": "Bot Two",
     "description": "This is Bot Two",
-    "img": "https://cdn-icons-png.flaticon.com/256/1448/1448779.png",
+    "img": "path/to/image2.png",
+    "llm": { "id": 2, "name": "LLM Two", "image": "path/to/llm2.png" },
     "files": [],
-    "llm":{
-      "id": 2,
-      "name": "Llama2",
-      "image": "https://assets-global.website-files.com/625447c67b621ab49bb7e3e5/6511e6898e966841878dee22_64f2042e4dd1948b864b520b_Frame%25203186%2520(1).jpeg"
-    },
-    "status": "active"
-  },
-  {
-    "id": 3,
-    "name": "Bot 3",
-    "description": "This is Bot Two",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTit0UpPXNoSThn4Isl6uoZuSyTKmyvWhPrylXS66VVBw&s",
-    "files": [],
-    "llm":{
-      "id": 2,
-      "name": "Llama2",
-      "image": "https://assets-global.website-files.com/625447c67b621ab49bb7e3e5/6511e6898e966841878dee22_64f2042e4dd1948b864b520b_Frame%25203186%2520(1).jpeg"
-    },
-    "status": "active"
+    "status": "inactive"
   }
 ]

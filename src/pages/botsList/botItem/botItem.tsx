@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Bot } from "../../../data/types";
 import botIcon from "../../../assets/bot-icon.png";
-import { useBots } from "../../../context/BotsContext";
+import { useBots } from "../../../context/botsContext";
 import "./botItem.css";
 import DeleteConfirmationModal from "../../../components/deleteConfirmationModal";
 

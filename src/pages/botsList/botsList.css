@@ -1,16 +1,23 @@
-.container{
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
-    width: 100%;
-    flex-direction: column;
+.mainContainer {
+  display: flex;
+  height: 90vh;
+  width: 100%;
 }
-.bots-title{
-    padding: 0px 20px;
+
+.sidebar {
+  width: 295px;
+  background-color: #5967F1;
+  position: fixed; /* Ensure it's fixed to the viewport */
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
-.bots-list-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    width: 100%;
+
+.contentContainer {
+  margin-left: 295px; /* Ensure content is to the right of the sidebar */
+  margin-top: 100px; /* Adjust padding for the height of the navbar */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
 }

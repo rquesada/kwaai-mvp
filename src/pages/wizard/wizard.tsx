@@ -1,18 +1,19 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import userAvatar from "../../assets/avatar.png";
 import Details from "./details";
 import Knowledge from "./knowledge";
 import Llm from "./llm/llm";
 import Status from "./status";
 import { LlmOption, Bot } from "../../data/types";
 import ConfirmationModal from "../../components/confirmationModal";
-import { useBots } from "../../context/BotsContext";
+import { useBots } from "../../context/botsContext";
 import { v4 as uuidv4 } from 'uuid';
 import "./wizard.css";
 
+interface WizardProps {
+  showList: () => void;
+}
 
-export default function Wizard() {
+const Wizard: React.FC<WizardProps> = ({ showList }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [newBot, setNewBot] = useState<Bot>({
     id: uuidv4(),
@@ -24,7 +25,6 @@ export default function Wizard() {
     status: "",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
   const { addBot } = useBots();
 
   const steps = [
@@ -69,22 +69,19 @@ export default function Wizard() {
 
   const handleConfirmCancel = () => {
     setIsModalOpen(false);
-    navigate("/List");
+    showList();
   };
 
   const handleDeploy = () => {
     console.log("New bot to add", newBot);
     addBot(newBot);
-    navigate("/List");
+    showList();
   };
 
   return (
     <div className="wizard-container">
       <span>Create your custom robot</span>
       <div className="sections-container">
-        <div className="left-section-wizard">
-          <img width="100%" src={userAvatar} alt="robot" />
-        </div>
         <div className="right-section-wizard">{steps[currentStep]}</div>
       </div>
       <div className="wizard-bottom-container">
@@ -125,3 +122,5 @@ export default function Wizard() {
     </div>
   );
 }
+
+export default Wizard;

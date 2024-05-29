@@ -1,31 +1,23 @@
 .wizard-container {
   display: flex;
-  width: calc(100% - 24px);
-  height: calc(100vh - 48px); /* Full height of the viewport */
-  padding: 12px;
+  width: calc(100% - 60px);
+  height: calc(100vh - 60px); /* Full height of the viewport */
+  margin: 30px;
   flex-direction: column;
+  border: 1px solid red;
 }
 
 .sections-container {
   margin-top: 40px;
   display: flex;
-}
-
-.left-section-wizard {
-  flex: 1; /* Ensures each div takes up equal space */
-  display: flex;
-  max-width: 50%;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
+  flex: 1; /* Ensures it takes all available space */
 }
 
 .right-section-wizard {
-  flex: 1; /* Ensures each div takes up equal space */
+  flex: 1; /* Ensures it takes all available space */
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 50%;
   text-align: center;
   color: black;
   flex-direction: column;

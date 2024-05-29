@@ -1,0 +1,7 @@
+.botsListGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: calc(100% - 40px);
+    padding: 0px 20px;
+  }

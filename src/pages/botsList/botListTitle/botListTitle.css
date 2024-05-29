@@ -1,0 +1,32 @@
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  .addButton {
+    display: flex;
+    align-items: center;
+    background-color: #5967F1;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #5967F1;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+
+  .addButtonIcon {
+    margin-right: 10px;
+    font-size: 24px;
+  }

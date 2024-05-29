@@ -1,38 +1,40 @@
-/* src/components/NavBar.css */
 .navbar {
-    background-color: white;
-    padding: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding-right: 12px;
-    width: 75%;
-    justify-content: flex-end;
-  }
-  
-  .navbar-item {
-    margin: 0 8px;
-  }
-  
-  .navbar-link {
-    color: black;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar-link:hover {
-    background-color: #555;
-    border-radius: 4px;
-  }
-  
-  .navbar-logo{
-    width: 25%;
-  }
+  background-color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 295px; /* Position it to the right of the sidebar */
+  width: calc(100% - 295px); /* Width minus the sidebar width */
+  height: 60px;
+  display: flex;
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-right: 12px;
+  width: 75%;
+  justify-content: flex-end;
+}
+
+.navbar-item {
+  margin: 0 8px;
+}
+
+.navbar-link {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-link:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.navbar-logo {
+  width: 25%;
+}

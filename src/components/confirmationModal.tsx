@@ -1,5 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
+import PrimaryButton from "../components/buttons/primaryButton/primaryButton";
+import SecondaryButton from "../components/buttons/secondaryButton/secondaryButton";
 import "./confirmationModal.css";
 
 // Set the app element for accessibility
@@ -14,11 +16,11 @@ interface ConfirmationModalProps {
 const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ isOpen, onRequestClose, onConfirm }) => {
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} className="modal" overlayClassName="overlay">
-      <h2>Are you sure you want to cancel?</h2>
-      <p>All changes will be lost.</p>
+      <h2 className="modal-title">Are you sure?</h2>
+      <p className="modal-text">Your progress will be lost if you exit.</p>
       <div className="modal-buttons">
-        <button onClick={onRequestClose} className="modal-button">No</button>
-        <button onClick={onConfirm} className="modal-button">Yes</button>
+        <SecondaryButton text="Cancel" onClick={onRequestClose} enabled={true} />
+        <PrimaryButton text="Exit" onClick={onConfirm} enabled={true} />
       </div>
     </Modal>
   );

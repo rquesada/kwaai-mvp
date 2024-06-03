@@ -2,12 +2,15 @@ import { useState } from "react";
 import Details from "./details";
 import Knowledge from "./knowledge";
 import Llm from "./llm/llm";
-import Status from "./status";
+import Status from "./status/status";
+import Test from "./test";
 import { LlmOption, Bot } from "../../data/types";
 import ConfirmationModal from "../../components/confirmationModal";
 import { useBots } from "../../context/botsContext";
 import { v4 as uuidv4 } from 'uuid';
 import "./wizard.css";
+import WizardTitle from "./wizardTitle/wizardTitle";
+import WizardBottom from "./wizardBottom/wizardBottom"; // Import the new component
 
 interface WizardProps {
   showList: () => void;
@@ -42,6 +45,11 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
       key="llm" 
       onSelect={(llmOption: LlmOption) => setNewBot({ ...newBot, llm: llmOption })} 
       selectedLlmOption={newBot.llm}
+    />,
+    <Test
+      key="test" 
+      bot={newBot}
+      setBot={setNewBot}
     />,
     <Status 
       key="status" 
@@ -80,40 +88,18 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
 
   return (
     <div className="wizard-container">
-      <span>Create your custom robot</span>
+      <WizardTitle currentStep={currentStep} />
       <div className="sections-container">
         <div className="right-section-wizard">{steps[currentStep]}</div>
       </div>
-      <div className="wizard-bottom-container">
-        <button
-          onClick={handleBack}
-          disabled={currentStep === 0}
-          className="wizard-button"
-        >
-          Back
-        </button>
-        <button
-          onClick={handleCancel}
-          className="wizard-button"
-        >
-          Cancel
-        </button>
-        {currentStep === steps.length - 1 && (
-          <button
-            onClick={handleDeploy}
-            className="wizard-button"
-          >
-            Deploy
-          </button>
-        )}
-        <button
-          onClick={handleNext}
-          disabled={currentStep === steps.length - 1}
-          className="wizard-button"
-        >
-          Next
-        </button>
-      </div>
+      <WizardBottom
+        currentStep={currentStep}
+        totalSteps={steps.length}
+        onBack={handleBack}
+        onNext={handleNext}
+        onCancel={handleCancel}
+        onDeploy={handleDeploy}
+      />
       <ConfirmationModal
         isOpen={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}

@@ -1,0 +1,36 @@
+.wizard-title {
+    padding: 0px; /* Optional: Add some padding for better spacing */
+  }
+  
+  .wizard-title-content {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: flex-start; /* Align text to the left */
+  }
+  
+  .wizard-title span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000; /* Corrected color to be black */
+    margin-bottom: 10px; /* Add some space between text and image */
+  }
+  
+  .wizard-title img {
+    display: block;
+    margin: 0 auto; /* Center image horizontally */
+  }
+
+  .wizard-sub-title{
+    text-align: center; /* Align text to the center */
+  }
+  .wizard-sub-title span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000; /* Corrected color to be black */
+    margin-bottom: 10px; /* Add some space between text and image */
+  }
+  

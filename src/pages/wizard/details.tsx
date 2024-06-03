@@ -1,5 +1,6 @@
 import React from "react";
 import { Bot } from "../../data/types";
+import "./wizard.css";
 
 interface DetailsProps {
   bot: Bot;
@@ -18,17 +19,16 @@ const Details: React.FC<DetailsProps> = ({ bot, setBot }) => {
   };
   return (
     <div className="details-container">
-      <span className="details-title">Robot Information</span>
-      <span className="details-subtitle">Name :</span>
+      <span className="details-subtitle">Agent's Name :</span>
       <textarea
-        rows={4}
+        rows={3}
         className="details-name"
         value={bot.name}
         onChange={handleNameChange}
       />
       <span className="details-subtitle">Description :</span>
       <textarea
-        rows={10}
+        rows={6}
         className="details-name"
         value={bot.description}
         onChange={handleDescriptionChange}

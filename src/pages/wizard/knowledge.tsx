@@ -1,5 +1,6 @@
 import React from "react";
 import { useDropzone } from "react-dropzone";
+import downloadIcon from "../../assets/download-icon.png"
 import { Bot } from "../../data/types";
 
 interface KnowledgeProps {
@@ -25,13 +26,16 @@ const Knowledge: React.FC<KnowledgeProps> = ({ bot, setBot }) => {
 
   return (
     <div className="details-container">
-      <span className="details-title">Upload Knowdledge</span>
       <div {...getRootProps({ className: "dropzone" })}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <img src={downloadIcon} alt="Download Icon" className="download-icon" />
+        <p>Drag & Drop files here</p>
+        <div className="browse-text">
+          <span>or</span>
+          <span className="browse-link">Browse</span>
+        </div>
       </div>
       <aside>
-        <h4>Files</h4>
         <ul>{fileList}</ul>
       </aside>
     </div>

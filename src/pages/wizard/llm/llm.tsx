@@ -2,6 +2,7 @@ import React from "react";
 import { LlmOption } from "../../../data/types";
 import llmOptionsData from "../../../data/llm.json";
 import LlmItem from "./llmItem";
+import "./llm.css";
 
 interface LlmProps {
   onSelect: (option: LlmOption) => void;
@@ -10,8 +11,7 @@ interface LlmProps {
 
 const Llm: React.FC<LlmProps> = ({ onSelect, selectedLlmOption }) => {
   return (
-    <div className="details-container">
-      <span className="details-title">LLM</span>
+    <div className="llm-container">
       <div className="llm-list-grid">
         {llmOptionsData.map((llm) => (
           <LlmItem

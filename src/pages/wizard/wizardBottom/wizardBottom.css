@@ -1,0 +1,21 @@
+.wizard-bottom-container {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  margin-top: auto;
+  gap: 10px; /* Add gap between buttons */
+}
+
+.wizard-button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.wizard-button + .wizard-button {
+  margin-left: 10px;
+}

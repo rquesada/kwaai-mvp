@@ -1,0 +1,23 @@
+.primary-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    padding: 13px 28px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none; /* Ensure no border is applied */
+    border-radius: 6px;
+  }
+  
+  .primary-button.enabled {
+    background-color: #5967F1;
+    color: white;
+  }
+  
+  .primary-button.disabled {
+    background-color: grey;
+    color: white;
+  }
+  

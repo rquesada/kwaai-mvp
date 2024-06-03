@@ -1,10 +1,10 @@
+/* Existing styles */
+
 .wizard-container {
   display: flex;
-  width: calc(100% - 60px);
-  height: calc(100vh - 60px); /* Full height of the viewport */
-  margin: 30px;
+  width: 100%;
+  height: 100%; 
   flex-direction: column;
-  border: 1px solid red;
 }
 
 .sections-container {
@@ -49,42 +49,88 @@
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  width: 80%;
+  width: 100%;
   text-align: left;
-  margin: 0 auto;
-}
-
-.details-title {
-  font-weight: bold;
-  font-size: x-large;
-  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .details-subtitle {
-  font-weight: bold;
-  font-size: large;
-  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000; /* Corrected color to be black */
+  margin-bottom: 10px; /* Add some space between text and next element */
+}
+
+.details-name {
+  margin-bottom: 30px; /* Add some space between textarea and next subtitle */
+}
+
+.details-description {
+  margin-bottom: 10px; /* Add some space between subtitle and next textarea */
 }
 
 textarea {
   resize: none;
+  border-color: #5967F1;
+  border-radius: 8px;
+  background-color: #F0F3FF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
 }
 
 .dropzone {
-  border: 2px dashed #cccccc;
+  border: 1px dashed #5967F1;
   border-radius: 4px;
-  background: #fafafa;
+  background: #F0F3FF;
   padding: 20px;
   text-align: center;
   cursor: pointer;
+  width: 60%; 
+  margin: 0 auto; 
 }
 
 .dropzone p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
   margin: 0;
 }
 
 .dropzone:hover {
   background-color: #e0e0e0;
+}
+
+.dropzone img {
+  margin-bottom: 10px;
+}
+
+.browse-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.browse-text span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: left;
+}
+
+.browse-link {
+  margin-left: 5px;
+  text-decoration: underline;
+  color: #5967F1;
 }
 
 aside {
@@ -102,25 +148,4 @@ aside ul {
 
 aside ul li {
   margin-bottom: 5px;
-}
-
-.llm-list-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  width: 100%;
-}
-
-.status-buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-
-.status-buttons button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
 }

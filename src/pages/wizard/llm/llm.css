@@ -1,0 +1,16 @@
+.llm-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%; /* Take 60% of the available width */
+    margin: 0 auto; /* Center horizontally */
+    text-align: left;
+  }
+
+.llm-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+  }

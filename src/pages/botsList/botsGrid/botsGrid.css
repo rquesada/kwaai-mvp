@@ -1,7 +1,7 @@
 .botsListGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    width: calc(100% - 40px);
-    padding: 0px 20px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(329px, 1fr));
+  grid-gap: 20px;
+  width: calc(100% - 40px);
+  padding: 0px 20px;
+}

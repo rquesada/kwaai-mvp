@@ -1,0 +1,42 @@
+.face-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #F0F0F0;
+    width: 224px;
+    height: 241px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer; /* Make it look clickable */
+}
+
+.face-item img {
+    width: 100%;
+    max-height: 165px;
+    object-fit: cover;
+}
+
+.radio-button-container {
+    height: 76px; /* Fixed height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.radio-button-container input[type="radio"] {
+    margin-right: 10px;
+    transform: translateY(1px); /* Adjust for better vertical alignment */
+}
+
+.radio-button-container label {
+    margin: 0;
+    line-height: 1.2; /* Adjust line-height to vertically center the text */
+}
+
+.radio-button-container label{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}

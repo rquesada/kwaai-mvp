@@ -1,0 +1,27 @@
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 60%;
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.details-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000; /* Corrected color to be black */
+    margin-bottom: 10px; /* Add some space between text and next element */
+}
+  
+.details-name {
+    margin-bottom: 30px; /* Add some space between textarea and next subtitle */
+}
+  
+.details-description {
+    margin-bottom: 10px; /* Add some space between subtitle and next textarea */
+}

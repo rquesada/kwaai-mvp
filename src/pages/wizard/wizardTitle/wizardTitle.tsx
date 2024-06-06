@@ -3,6 +3,8 @@ import wizard2 from "../../../assets/wizard-step2.png";
 import wizard3 from "../../../assets/wizard-step3.png";
 import wizard4 from "../../../assets/wizard-step4.png";
 import wizard5 from "../../../assets/wizard-step5.png";
+import wizard6 from "../../../assets/wizard-step6.png";
+import wizard7 from "../../../assets/wizard-step7.png";
 import "./wizardTitle.css";
 
 interface WizardTitleProps {
@@ -22,6 +24,10 @@ const WizardTitle: React.FC<WizardTitleProps> = ({ currentStep }) => {
         return wizard4;
       case 4:
         return wizard5;
+      case 5:
+        return wizard6;
+      case 6:
+        return wizard7;
       default:
         return wizard1;
     }
@@ -32,15 +38,19 @@ const WizardTitle: React.FC<WizardTitleProps> = ({ currentStep }) => {
       case 0:
         return "Step 1: Set the new bot";
       case 1:
-        return "Step 2: Choose your favorite AI";
+        return "Step 2: Choose an AI";
       case 2:
-        return "Step 3: Share your knowledge";
+        return "Step 3: Share you knowledge";
       case 3:
-        return "Step 4: Test the agent";
+        return "Step 4: Choose the agent’s face";
       case 4:
-        return "Step 5: Deploy!";
+        return "Step 5: Now, Let’s choose it’s voice";
+      case 5:
+        return "Step 6: Test the agent";
+      case 6:
+          return "Step 7: Deploy!";
       default:
-        return "Step 1: Set the new bot";
+        return "Step 7: Deploy!";
     }
   };
 

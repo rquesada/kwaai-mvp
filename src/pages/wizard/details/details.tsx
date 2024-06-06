@@ -1,6 +1,6 @@
 import React from "react";
-import { Bot } from "../../data/types";
-import "./wizard.css";
+import { Bot } from "../../../data/types";
+import "./details.css";
 
 interface DetailsProps {
   bot: Bot;
@@ -18,7 +18,7 @@ const Details: React.FC<DetailsProps> = ({ bot, setBot }) => {
     setBot({ ...bot, description: e.target.value });
   };
   return (
-    <div className="details-container">
+    <div className="detail-container">
       <span className="details-subtitle">Agent's Name :</span>
       <textarea
         rows={3}

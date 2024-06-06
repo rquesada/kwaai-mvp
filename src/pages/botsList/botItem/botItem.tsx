@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Bot } from "../../../data/types";
 import botIcon from "../../../assets/bot-icon.png";
+import shareIcon from "../../../assets/share-icon.png";
 import { useBots } from "../../../context/botsContext";
 import "./botItem.css";
 import DeleteConfirmationModal from "../../../components/deleteConfirmationModal";
+import PrimaryButton from "../../../components/buttons/primaryButton/primaryButton";
+import SecondaryButton from "../../../components/buttons/secondaryButton/secondaryButton";
 
 interface BotItemProps {
   botItemData: Bot;
@@ -21,18 +24,20 @@ const BotItem: React.FC<BotItemProps> = ({ botItemData }) => {
   return (
     <div className="bot-card">
       <div className="bot-card-header">
-        <img
-          src={botItemData.img ? botItemData.img : botIcon}
-          alt="bot"
-        />
-        <h2>{botItemData.name}</h2>
+        <img src={botItemData.img ? botItemData.img : botIcon} alt="bot" />
       </div>
       <div className="bot-card-body">
-        <p>{botItemData.description}</p>
+        <div className="bot-card-header-with-button">
+          <h2 className="bot-card-name">{botItemData.name}</h2>
+          <button className="share-button">
+            <img src={shareIcon} alt="Share" />
+          </button>
+        </div>
+        <p className="bot-card-description">{botItemData.description}</p>
       </div>
       <div className="bot-buttons-area">
-        <button className="bot-button">Edit</button>
-        <button className="bot-button" onClick={() => setIsModalOpen(true)}>Delete</button>
+        <SecondaryButton text="Delete" onClick={() => setIsModalOpen(true)} enabled={true} />
+        <PrimaryButton text="Edit" onClick={() => {}} enabled={true} />
       </div>
       <DeleteConfirmationModal
         isOpen={isModalOpen}

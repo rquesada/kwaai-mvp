@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Details from "./details";
+import Details from "./details/details";
 import Knowledge from "./knowledge";
 import Llm from "./llm/llm";
 import Status from "./status/status";
@@ -11,6 +11,8 @@ import { v4 as uuidv4 } from 'uuid';
 import "./wizard.css";
 import WizardTitle from "./wizardTitle/wizardTitle";
 import WizardBottom from "./wizardBottom/wizardBottom"; // Import the new component
+import Face from "./face/face";
+import Voice from "./voice/voice";
 
 interface WizardProps {
   showList: () => void;
@@ -26,6 +28,8 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
     llm: { id: uuidv4(), name: "", image: "" },
     files: [],
     status: "",
+    voice: { id: "", name: "", imageURL: "", videoURL: "" },
+    face: { id: "", name: "", imageURL: "", videoURL: "" },
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { addBot } = useBots();
@@ -36,15 +40,23 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
       bot={newBot}
       setBot={setNewBot}
     />,
+    <Llm 
+      key="llm" 
+      onSelect={(llmOption: LlmOption) => setNewBot({ ...newBot, llm: llmOption })} 
+      selectedLlmOption={newBot.llm}
+    />,
     <Knowledge 
       key="knowledge" 
       bot={newBot}
       setBot={setNewBot}
     />,
-    <Llm 
-      key="llm" 
-      onSelect={(llmOption: LlmOption) => setNewBot({ ...newBot, llm: llmOption })} 
-      selectedLlmOption={newBot.llm}
+    <Face
+      key="face"
+      bot={newBot}
+      setBot={setNewBot}
+    />,
+    <Voice
+      key="voice"
     />,
     <Test
       key="test" 

@@ -1,0 +1,20 @@
+[
+    {
+        "id": "face1",
+        "name": "Alice",
+        "imageURL": "https://static.vecteezy.com/system/resources/previews/026/536/284/non_2x/27yr-old-beautiful-face-ai-generated-free-photo.jpg",
+        "videoURL": ""
+    },
+    {
+        "id": "face2",
+        "name": "Alex",
+        "imageURL": "https://img.freepik.com/premium-photo/face-that-has-word-ai-it_872754-2069.jpg",
+        "videoURL": ""
+    },
+    {
+        "id": "face3",
+        "name": "John",
+        "imageURL": "https://images.nightcafe.studio//assets/man-in-suit.jpg?tr=w-1600,c-at_max",
+        "videoURL": ""
+    }
+]

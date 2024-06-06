@@ -1,21 +1,87 @@
-.bot-card{
-    border-radius: 5px;
-    background-color: lightgray;
+.bot-card {
+    width: 329px;
+    height: 389px;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .bot-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .bot-card-header img {
+    width: 329px;
+    height: 185px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .bot-card-body {
+    flex-grow: 1;
     padding: 10px;
-}
-
-.bot-card-header{
-
-    img{
-        width: 100%;
-        height: 200px;
-        border-radius: 5px 5px 0px 0px;
-    }
-}
-
-.bot-button{
+    text-align: left;
+  }
+  
+  .bot-card-header-with-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bot-card-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .bot-card-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .bot-buttons-area {
+    display: flex;
+    justify-content: left;
+    gap: 8px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .bot-button {
     color: white;
     background-color: black;
+    border: none;
     border-radius: 5px;
-    margin-right: 8px;
-}
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .share-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  .share-button img {
+    width: 17px; /* Adjust size as needed */
+    height: 17px; /* Adjust size as needed */
+  }
+  

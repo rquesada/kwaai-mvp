@@ -12,4 +12,13 @@ export interface Bot {
   llm: LlmOption;
   files:File[];
   status: string;
+  voice: Feature;
+  face: Feature;
+}
+
+export interface Feature {
+  id: string;
+  name: string;
+  imageURL: string;
+  videoURL: string;
 }

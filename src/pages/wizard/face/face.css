@@ -1,0 +1,50 @@
+.face-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+
+.face-left-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Set a fixed gap between grid items */
+  justify-content: space-evenly; /* Distribute free space evenly horizontally */
+  align-content: space-evenly; /* Distribute free space evenly vertically */
+  width: 50%;
+  height: 100%;
+  padding: 40px; /* Add padding to ensure spacing from the edges */
+  box-sizing: border-box;
+}
+
+.face-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Make sure it occupies 95% of the container width */
+  height: 100%; /* Make sure it occupies 95% of the container height */
+}
+
+.face-preview-container{
+  width: 95%;
+  height: 95%;
+  border-radius: 8px;
+  border: 2px solid #F0F0F0;
+}
+.selected-face-image {
+  width:100%;
+  height: 566px; 
+  object-fit: cover; /* Make the image cover the container without changing aspect ratio */
+  border-radius: 8px 8px 0px 0px;
+}
+
+.selected-face-text {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  height: 40px; /* Fixed height for text */
+}

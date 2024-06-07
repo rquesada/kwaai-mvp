@@ -1,5 +1,6 @@
 import React from "react";
 import { Feature } from "../../../data/types";
+import voiceIcon from "../../../assets/voice-icon.png";
 import "./optionSelect.css";
 
 interface OptionSelectProps {
@@ -11,7 +12,13 @@ interface OptionSelectProps {
 const OptionSelect: React.FC<OptionSelectProps> = ({ feature, isSelected, onSelect }) => {
   return (
     <div className="face-item" onClick={onSelect}>
-      <img src={feature.imageURL} alt={feature.name} />
+      {feature.imageURL ? (
+        <img src={feature.imageURL} alt={feature.name} className="feature-image" />
+      ) : (
+        <div className="placeholder">
+          <img src={voiceIcon} alt="Voice Icon" className="voice-icon-option" />
+        </div>
+      )}
       <div className="radio-button-container">
         <input
           type="radio"

@@ -1,0 +1,20 @@
+[
+    {
+        "id": "voice1",
+        "name": "Voice 1",
+        "imageURL": "",
+        "videoURL": ""
+    },
+    {
+        "id": "voice2",
+        "name": "Voice 2",
+        "imageURL": "",
+        "videoURL": ""
+    },
+    {
+        "id": "voice3",
+        "name": "Voice 3",
+        "imageURL": "",
+        "videoURL": ""
+    }
+]

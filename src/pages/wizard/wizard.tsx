@@ -7,7 +7,7 @@ import Test from "./test";
 import { LlmOption, Bot } from "../../data/types";
 import ConfirmationModal from "../../components/confirmationModal";
 import { useBots } from "../../context/botsContext";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import "./wizard.css";
 import WizardTitle from "./wizardTitle/wizardTitle";
 import WizardBottom from "./wizardBottom/wizardBottom"; // Import the new component
@@ -35,39 +35,19 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
   const { addBot } = useBots();
 
   const steps = [
-    <Details 
-      key="details" 
-      bot={newBot}
-      setBot={setNewBot}
-    />,
-    <Llm 
-      key="llm" 
-      onSelect={(llmOption: LlmOption) => setNewBot({ ...newBot, llm: llmOption })} 
+    <Details key="details" bot={newBot} setBot={setNewBot} />,
+    <Llm
+      key="llm"
+      onSelect={(llmOption: LlmOption) =>
+        setNewBot({ ...newBot, llm: llmOption })
+      }
       selectedLlmOption={newBot.llm}
     />,
-    <Knowledge 
-      key="knowledge" 
-      bot={newBot}
-      setBot={setNewBot}
-    />,
-    <Face
-      key="face"
-      bot={newBot}
-      setBot={setNewBot}
-    />,
-    <Voice
-      key="voice"
-    />,
-    <Test
-      key="test" 
-      bot={newBot}
-      setBot={setNewBot}
-    />,
-    <Status 
-      key="status" 
-      bot={newBot}
-      setBot={setNewBot}
-    />,
+    <Knowledge key="knowledge" bot={newBot} setBot={setNewBot} />,
+    <Face key="face" bot={newBot} setBot={setNewBot} />,
+    <Voice key="voice" bot={newBot} setBot={setNewBot} />,
+    <Test key="test" bot={newBot} setBot={setNewBot} />,
+    <Status key="status" bot={newBot} setBot={setNewBot} />,
   ];
 
   const handleNext = () => {
@@ -104,14 +84,17 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
       <div className="sections-container">
         <div className="right-section-wizard">{steps[currentStep]}</div>
       </div>
-      <WizardBottom
-        currentStep={currentStep}
-        totalSteps={steps.length}
-        onBack={handleBack}
-        onNext={handleNext}
-        onCancel={handleCancel}
-        onDeploy={handleDeploy}
-      />
+      <div className="buttons-container">
+        <WizardBottom
+          currentStep={currentStep}
+          totalSteps={steps.length}
+          onBack={handleBack}
+          onNext={handleNext}
+          onCancel={handleCancel}
+          onDeploy={handleDeploy}
+        />
+      </div>
+
       <ConfirmationModal
         isOpen={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}
@@ -119,6 +102,6 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
       />
     </div>
   );
-}
+};
 
 export default Wizard;

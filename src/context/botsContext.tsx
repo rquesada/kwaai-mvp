@@ -8,6 +8,7 @@ interface BotsProviderProps {
 interface BotsContextProps {
   bots: Bot[];
   faceList: Feature[];
+  voiceList: Feature[];
   addBot: (bot: Bot) => void;
   removeBot: (id: string) => void;
   loadFaces: () => void;
@@ -18,6 +19,7 @@ const BotsContext = createContext<BotsContextProps | undefined>(undefined);
 export const BotsProvider: React.FC<BotsProviderProps> = ({ children }) => {
   const [bots, setBots] = useState<Bot[]>([]);
   const [faceList, setFaceList] = useState<Feature[]>([]);
+  const [voiceList, setVoiceList] = useState<Feature[]>([]);
 
   const addBot = (bot: Bot) => {
     setBots((prevBots) => [...prevBots, bot]);
@@ -37,13 +39,24 @@ export const BotsProvider: React.FC<BotsProviderProps> = ({ children }) => {
     }
   };
 
+  const loadVoices = async () => {
+    try {
+      const response = await fetch("/voices.json");
+      const data = await response.json();
+      setVoiceList(data);
+    } catch (error) {
+      console.error("Failed to load voices", error);
+    }
+  };
+
   useEffect(() => {
     console.log("Loading faces...");
     loadFaces();
+    loadVoices();
   }, []);
 
   return (
-    <BotsContext.Provider value={{ bots, faceList, addBot, removeBot, loadFaces }}>
+    <BotsContext.Provider value={{ bots, faceList,voiceList , addBot, removeBot, loadFaces }}>
       {children}
     </BotsContext.Provider>
   );

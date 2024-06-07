@@ -149,3 +149,11 @@ aside ul {
 aside ul li {
   margin-bottom: 5px;
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

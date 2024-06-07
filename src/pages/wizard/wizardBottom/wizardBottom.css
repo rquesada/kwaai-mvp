@@ -4,6 +4,7 @@
   align-items: center;
   margin-top: auto;
   gap: 10px; /* Add gap between buttons */
+  width: 78%;
 }
 
 .wizard-button {

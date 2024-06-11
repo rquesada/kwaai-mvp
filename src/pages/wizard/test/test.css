@@ -1,0 +1,41 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 10px;
+    background-color: #F0F3FF;
+    width: 60%;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  
+  .chat-history {
+    flex: 1;
+    height: 450px; /* Fixed height for the chat history */
+    overflow-y: auto; /* Add vertical scrolling */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F0F3FF; /* Set background color to match container */
+  }
+  
+  .chat-input-container {
+    display: flex;
+    align-items: center; /* Align items to center vertically */
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding-right: 20px;
+  }
+  
+  .chat-textarea {
+    flex: 1;
+    padding: 10px;
+    resize: none; /* Prevent resizing */
+    border: none; /* Remove border */
+    background-color: white; /* Set background color to match container */
+  }
+  
+  .chat-textarea:focus {
+    outline: none; /* Remove the border that appears when focused */
+  }

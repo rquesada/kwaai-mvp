@@ -3,7 +3,7 @@ import Details from "./details/details";
 import Knowledge from "./knowledge";
 import Llm from "./llm/llm";
 import Status from "./status/status";
-import Test from "./test";
+import Test from "./test/test";
 import { LlmOption, Bot } from "../../data/types";
 import ConfirmationModal from "../../components/confirmationModal";
 import { useBots } from "../../context/botsContext";
@@ -46,7 +46,7 @@ const Wizard: React.FC<WizardProps> = ({ showList }) => {
     <Knowledge key="knowledge" bot={newBot} setBot={setNewBot} />,
     <Face key="face" bot={newBot} setBot={setNewBot} />,
     <Voice key="voice" bot={newBot} setBot={setNewBot} />,
-    <Test key="test" bot={newBot} setBot={setNewBot} />,
+    <Test key="test" />,
     <Status key="status" bot={newBot} setBot={setNewBot} />,
   ];
 

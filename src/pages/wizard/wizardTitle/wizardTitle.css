@@ -24,6 +24,7 @@
 
   .wizard-sub-title{
     text-align: center; /* Align text to the center */
+    padding-top: 30px;
   }
   .wizard-sub-title span{
     font-family: 'Poppins', sans-serif;
